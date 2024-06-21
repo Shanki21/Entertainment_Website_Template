@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Streamy</title>
+    <link rel="stylesheet" href="../../assets/style/login.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/bootstrap-5.3.3-dist/css/bootstrap.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <div class="login-top text-center">
+      <a href="../landing_page/homepage.html"
+        ><img class="img-fluid" src="../../assets/images/logo.png" alt="logo"
+      /></a>
+    </div>
+    <img
+      class="bg-img"
+      src="../../assets/images/bg-img.jpg"
+      alt="bg-img"
+      width="100%"
+      height="90%"
+    />
+    <div
+      class="d-flex container-md justify-content-center align-item-center"
+      style="width: 100vw"
+    >
+      <section class="login-box">
+        <h2 class="text-white mb-4">Sign in</h2>
+        <!-- Add id attribute to the form for easy targeting -->
+        <form id="loginForm" method="#" action="#" class="mb-4">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+              name="email"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+              name="password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <a href="html/landing_page/homepage.html">
+            <button
+              type="submit"
+              class="btn btn-danger mt-4"
+              style="width: 400px"
+            >
+              Sign in
+            </button></a
+          >
+          <div class="mt-2 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input mt-2"
+              id="exampleCheck1"
+            />
+            <label
+              class="form-check-label text-white small-text mt-2"
+              for="exampleCheck1"
+              >Remember me</label
+            >
+          </div>
+          <p class="small-text text-white mt-2">
+            New to Streamy?<a
+              class
+              target="_self"
+              href="../accounts/signup.html"
+              ><b>Sign up now</b></a
+            >
+          </p>
+        </form>
+      </section>
+    </div>
+
+    <footer class="container py-5"></footer>
+
+    <!--javascript-->
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+
+    <!-- JavaScript/jQuery for form validation -->
+    <script>
+      $(document).ready(function () {
+        $("#loginForm").submit(function (e) {
+          e.preventDefault(); // Prevent form submission
+          // Perform form validation
+          var email = $("#floatingInput").val();
+          var password = $("#floatingPassword").val();
+          if (!email || !password) {
+            alert("Please fill in all fields");
+            return;
+          }
+          // If validation passes, you can proceed with form submission
+          // For demonstration purpose, let's just log the form data
+          console.log("Email:", email);
+          console.log("Password:", password);
+          // Here you can perform AJAX submission or any other actions
+        });
+      });
+    </script>
+  </body>
+</html>

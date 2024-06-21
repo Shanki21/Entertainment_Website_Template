@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+
+  width: 100%; /* Set the width to 100% of the viewport width */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden; /* Hide horizontal overflow */
+
+  background-color: #000;
+}
+
+.navbar-brand {
+  margin-top: 10px;
+  background-color: #000;
+}
+
+.navbar a {
+  display: block;
+  color: red;
+
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+nav ul li {
+  margin-left: 20px;
+  padding-top: 2px;
+  list-style-type: none;
+  font-family: fantasy;
+}
+
+nav ul a {
+  font-size: 60px;
+  text-decoration: none;
+  color: red;
+}
+
+.search-container {
+  background: transparent;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  /*box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  inset -7px -7px 10px 0px rgba(0,0,0,.1),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ text-shadow:  0px 0px 6px rgba(255,255,255,.3),
+            -4px -4px 6px rgba(116, 125, 136, .2);
+text-shadow: 2px 2px 3px rgba(255,255,255,0.5);*/
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-container:hover > .search-input {
+  width: 200px;
+  background-color: #000;
+}
+
+.search-container .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+}
+
+.search-container .search-btn .fas {
+  color: red;
+  background-color: #000;
+}
+
+@keyframes hoverShake {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  25% {
+    transform: skew(5deg, 5deg);
+  }
+  75% {
+    transform: skew(-5deg, -5deg);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}
+
+.search-container:hover {
+  animation: hoverShake 0.15s linear 3;
+}
+
+.bg-card {
+  background-color: #000;
+}
+
+.fi {
+  background: transparent;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 60px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  /*box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  inset -7px -7px 10px 0px rgba(0,0,0,.1),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ text-shadow:  0px 0px 6px rgba(255,255,255,.3),
+            -4px -4px 6px rgba(116, 125, 136, .2);
+text-shadow: 2px 2px 3px rgba(255,255,255,0.5);*/
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+button {
+  float: right;
+}
+
+.card {
+  position: relative;
+}
+
+/* Modal Style*/
+.modal-body{
+  background-color: #000;
+}
+
+.modal-video-player {
+  width: 100%;
+  height: auto;
+}
+
+.episide-img{
+position: relative;
+align-items: center;
+}
+.episide-img img{
+  max-width: 100%;
+  height: auto;
+}
+.video-description h1{
+  color: #fff;
+}
+.arrow_link {
+  margin: 10px;
+  position: absolute;
+  display: block;
+  left: 40%;
+  top: 40px;
+}
+
+.arrow_link {
+  transition: opacity 0.3s ease;
+}
+
+.arrow_link img {
+  opacity: 0;
+}
+
+.arrow_link:hover img {
+  opacity: 1;
+}
+
+/* footer Style*/
+
+.footer-border {
+  border: #fff solid 3px;
+  padding: 20px 100px;
+}
